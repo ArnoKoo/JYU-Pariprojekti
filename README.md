@@ -1,0 +1,2 @@
+# JYU-Pariprojekti
+Parityö jutskaliini
