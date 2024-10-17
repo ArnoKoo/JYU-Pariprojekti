@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Stefan\\Documents\\GitHub\\HT_JYU\\Tank Clash\\Tank Clash\\Tank Clash.csproj": {}
+    "C:\\Users\\35844\\Documents\\GitHub\\JYU-Pariprojekti\\Tank Clash\\Tank Clash.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Stefan\\Documents\\GitHub\\HT_JYU\\Tank Clash\\Tank Clash\\Tank Clash.csproj": {
+    "C:\\Users\\35844\\Documents\\GitHub\\JYU-Pariprojekti\\Tank Clash\\Tank Clash.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Stefan\\Documents\\GitHub\\HT_JYU\\Tank Clash\\Tank Clash\\Tank Clash.csproj",
+        "projectUniqueName": "C:\\Users\\35844\\Documents\\GitHub\\JYU-Pariprojekti\\Tank Clash\\Tank Clash.csproj",
         "projectName": "Tank Clash",
-        "projectPath": "C:\\Users\\Stefan\\Documents\\GitHub\\HT_JYU\\Tank Clash\\Tank Clash\\Tank Clash.csproj",
-        "packagesPath": "C:\\Users\\Stefan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Stefan\\Documents\\GitHub\\HT_JYU\\Tank Clash\\Tank Clash\\obj\\",
+        "projectPath": "C:\\Users\\35844\\Documents\\GitHub\\JYU-Pariprojekti\\Tank Clash\\Tank Clash.csproj",
+        "packagesPath": "C:\\Users\\35844\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\35844\\Documents\\GitHub\\JYU-Pariprojekti\\Tank Clash\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\35844\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -42,6 +49,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Jypeli.FarseerPhysics.NET": {
+              "target": "Package",
+              "version": "[2.0.5, )"
+            },
+            "Jypeli.NET": {
+              "target": "Package",
+              "version": "[11.3.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
