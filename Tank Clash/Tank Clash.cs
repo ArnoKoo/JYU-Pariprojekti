@@ -14,6 +14,8 @@ public class Tank_Clash : PhysicsGame
         LuoKentta();
         PhysicsObject tankki1 = LuoTankki(this, -200, 0, Color.Green, 2);
         PhysicsObject tankki2 = LuoTankki(this, 200, 0, Color.Red, -2);
+        LuoPistelaskuri(-400);
+        LuoPistelaskuri(400);
         OhjainLogiikka(tankki1, tankki2);
     }
 
@@ -134,6 +136,23 @@ public class Tank_Clash : PhysicsGame
         {       
             Remove(projektiili);
         }
+    }
+    
+    void LuoPistelaskuri(double x)
+    {
+        IntMeter pistelaskuri;
+
+        pistelaskuri = new IntMeter(3);
+
+        Label pistenaytto = new Label();
+        pistenaytto.Title = "HP: ";
+        pistenaytto.X =  x;
+        pistenaytto.Y = Screen.Top - 100;
+        pistenaytto.TextColor = Color.Black;
+        pistenaytto.Color = Color.White;
+
+        pistenaytto.BindTo(pistelaskuri);
+        Add(pistenaytto);
     }
 
 public class Program
