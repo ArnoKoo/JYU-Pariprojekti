@@ -15,8 +15,11 @@ public class Tank_Clash : PhysicsGame
     private Image pelaaja2Kuva;
     private SoundEffect ampuminen;
     private SoundEffect osuminen;
+    
+
     public override void Begin() //Begin() on vissiin Update - Arska
     {
+        IsFullScreen = true;
         pelaaja1Kuva = LoadImage("P1Tank.png");
         pelaaja2Kuva = LoadImage("P2Tank.png");
         ampuminen = LoadSoundEffect("pew-pew-lame-sound-effect.wav");
@@ -26,11 +29,11 @@ public class Tank_Clash : PhysicsGame
 
         PhysicsObject tankki1 = LuoTankki(this, -200, 0, Color.Green, 2);
         tankki1.Image = pelaaja1Kuva;
-        tankki1.Size = new Vector(128, 128); // Set size based on image
+        tankki1.Size = new Vector(64, 64);
 
         PhysicsObject tankki2 = LuoTankki(this, 200, 0, Color.Red, -2);
         tankki2.Image = pelaaja2Kuva;
-        tankki2.Size = new Vector(128, 128); // Set size based on image
+        tankki2.Size = new Vector(64, 64);
 
         pelaaja1HP = new IntMeter(5);
         pelaaja2HP = new IntMeter(5);
@@ -41,20 +44,16 @@ public class Tank_Clash : PhysicsGame
         tankki1.Tag = "Pelaaja1";
         tankki2.Tag = "Pelaaja2";
 
-        tankki1.KineticFriction = 0.5;
-        tankki1.StaticFriction = 0.5;
-        tankki1.LinearDamping = 0.5;
-        tankki1.AngularDamping = 1.0;
+        tankki1.KineticFriction = 1;
+        tankki1.StaticFriction = 1;
+        tankki1.LinearDamping = 2;
+        tankki1.AngularDamping = 1;
 
-        tankki2.KineticFriction = 0.5;
-        tankki2.StaticFriction = 0.5;
-        tankki2.LinearDamping = 0.5;
-        tankki2.AngularDamping = 1.0;
-
-        Console.WriteLine($"Pelaaja 1 Image Size: {pelaaja1Kuva.Width}x{pelaaja1Kuva.Height}");
-        Console.WriteLine($"Tank 1 Physics Size: {tankki1.Size.X}x{tankki1.Size.Y}");
-        Console.WriteLine($"Pelaaja 2 Image Size: {pelaaja2Kuva.Width}x{pelaaja2Kuva.Height}");
-        Console.WriteLine($"Tank 2 Physics Size: {tankki2.Size.X}x{tankki2.Size.Y}");
+        tankki2.KineticFriction = 1;
+        tankki2.StaticFriction = 1;
+        tankki2.LinearDamping = 2;
+        tankki2.AngularDamping = 1;
+        
         OhjainLogiikka(tankki1, tankki2);
     }
 
@@ -96,31 +95,61 @@ public class Tank_Clash : PhysicsGame
         return tankki;
     }
 
-    private void LuoKentta() //Teoriassa vois luoda erikseen tankit mutta ei ole budjettia (aka jaksamista) moiselle - Arska  // on aikaa ja jaksamista
+    private void LuoKentta()
     {
         //Rajat
-        Level.CreateBorders(1.0, false);
-        Camera.ZoomToLevel();
-
+        double screenWidth = Screen.Width;
+        double screenHeight = Screen.Height;
+        
         PhysicsObject vasenReuna = Level.CreateLeftBorder();
+        vasenReuna.X = -screenWidth / 2;
+        vasenReuna.Height = screenHeight;
         vasenReuna.Restitution = 1.0;
         vasenReuna.KineticFriction = 0.0;
-        vasenReuna.IsVisible = false;
+        vasenReuna.IsVisible = true;
 
+        // Adjust right border
         PhysicsObject oikeaReuna = Level.CreateRightBorder();
+        oikeaReuna.X = screenWidth / 2;
+        oikeaReuna.Height = screenHeight;
         oikeaReuna.Restitution = 1.0;
         oikeaReuna.KineticFriction = 0.0;
-        oikeaReuna.IsVisible = false;
+        oikeaReuna.IsVisible = true;
 
+        // Adjust top border
         PhysicsObject ylaReuna = Level.CreateTopBorder();
+        ylaReuna.Y = screenHeight / 2;
+        ylaReuna.Width = screenWidth;
         ylaReuna.Restitution = 1.0;
         ylaReuna.KineticFriction = 0.0;
-        ylaReuna.IsVisible = false;
+        ylaReuna.IsVisible = true;
 
+        // Adjust bottom border
         PhysicsObject alaReuna = Level.CreateBottomBorder();
+        alaReuna.Y = -screenHeight / 2;
+        alaReuna.Width = screenWidth;
         alaReuna.Restitution = 1.0;
         alaReuna.KineticFriction = 0.0;
-        alaReuna.IsVisible = false;
+        alaReuna.IsVisible = true;
+        
+        //Ylimääräset seinät mapin keskusta varten
+        LuoSeina(-100, 100, 60, 400);
+        LuoSeina(100, -150, 60, 300);
+        LuoSeina(0, 0, 60, 300);
+    }
+
+    private void LuoSeina(double x, double y, double leveys, double korkeus) //Seinät mappia varte //Arska
+    {
+        PhysicsObject seina = new PhysicsObject(leveys, korkeus);
+        seina.Position = new Vector(x, y);
+        seina.Color = Color.Gray;
+        seina.Restitution = 1.0;
+        seina.KineticFriction = 0.0;
+        seina.LinearDamping = double.PositiveInfinity;
+        seina.AngularDamping = double.PositiveInfinity;
+        seina.IsVisible = true;
+        seina.Mass = double.PositiveInfinity; //hmm
+        Add(seina);
     }
 
     void Eteen(PhysicsObject pelaaja) //pelaajat liikkuu eteenpäin

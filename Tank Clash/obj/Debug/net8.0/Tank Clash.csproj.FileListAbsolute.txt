@@ -69,3 +69,4 @@ C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Con
 C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Content\homemadeoof-47509.wav
 C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Content\P1Tank.png
 C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Content\P2Tank.png
+C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Content\mappi.png
