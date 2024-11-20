@@ -8,39 +8,53 @@ using Jypeli;
 /// </summary>
 public class Tank_Clash : PhysicsGame
 {
+    //HP
     private IntMeter pelaaja1HP;
     private IntMeter pelaaja2HP;
 
+    //Kuvat ja soundEfektit
     private Image pelaaja1Kuva;
     private Image pelaaja2Kuva;
     private SoundEffect ampuminen;
     private SoundEffect osuminen;
     
+    //Poweruppien setuppi
+    private const int HPPowerupArvo = 1;
+    private const double nopeusBoostiPituus = 10;
+    private const double nopeusMultiplier = 100;
 
-    public override void Begin() //Begin() on vissiin Update - Arska
+    public override void Begin() //Begin() on vissiin Update() - Arska
     {
         IsFullScreen = true;
+        
+        //Pitää ladata erikseen
         pelaaja1Kuva = LoadImage("P1Tank.png");
         pelaaja2Kuva = LoadImage("P2Tank.png");
         ampuminen = LoadSoundEffect("pew-pew-lame-sound-effect.wav");
         osuminen = LoadSoundEffect("homemadeoof-47509.wav");
 
         LuoKentta();
-
-        PhysicsObject tankki1 = LuoTankki(this, -200, 0, Color.Green, 2);
+        PowerUpLooppi();
+        
+        //Pelaaja1 setuppi
+        PhysicsObject tankki1 = LuoTankki(this, -800, 0, Color.Red, 2);
         tankki1.Image = pelaaja1Kuva;
         tankki1.Size = new Vector(64, 64);
-
-        PhysicsObject tankki2 = LuoTankki(this, 200, 0, Color.Red, -2);
+        
+        //Pelaaja2 setuppi
+        PhysicsObject tankki2 = LuoTankki(this, 800, 0, Color.Blue, -2);
         tankki2.Image = pelaaja2Kuva;
         tankki2.Size = new Vector(64, 64);
-
+        
+        //HP mittaria varten
         pelaaja1HP = new IntMeter(5);
         pelaaja2HP = new IntMeter(5);
-
-        LuoPistelaskuri(-400, pelaaja1HP);
-        LuoPistelaskuri(400, pelaaja2HP);
-
+        
+        //Siitä puheen ollen
+        LuoPistelaskuri(-800, pelaaja1HP);
+        LuoPistelaskuri(800, pelaaja2HP);
+        
+        //Tää oli jottei omat luodit vahingoita.
         tankki1.Tag = "Pelaaja1";
         tankki2.Tag = "Pelaaja2";
 
@@ -55,6 +69,12 @@ public class Tank_Clash : PhysicsGame
         tankki2.AngularDamping = 1;
         
         OhjainLogiikka(tankki1, tankki2);
+    }
+
+    void PowerUpLooppi()
+    {
+        SpawnPowerUp();
+        Timer.SingleShot(2, PowerUpLooppi);
     }
 
     void OhjainLogiikka(PhysicsObject pelaaja1, PhysicsObject pelaaja2)
@@ -107,24 +127,21 @@ public class Tank_Clash : PhysicsGame
         vasenReuna.Restitution = 1.0;
         vasenReuna.KineticFriction = 0.0;
         vasenReuna.IsVisible = true;
-
-        // Adjust right border
+        
         PhysicsObject oikeaReuna = Level.CreateRightBorder();
         oikeaReuna.X = screenWidth / 2;
         oikeaReuna.Height = screenHeight;
         oikeaReuna.Restitution = 1.0;
         oikeaReuna.KineticFriction = 0.0;
         oikeaReuna.IsVisible = true;
-
-        // Adjust top border
+        
         PhysicsObject ylaReuna = Level.CreateTopBorder();
         ylaReuna.Y = screenHeight / 2;
         ylaReuna.Width = screenWidth;
         ylaReuna.Restitution = 1.0;
         ylaReuna.KineticFriction = 0.0;
         ylaReuna.IsVisible = true;
-
-        // Adjust bottom border
+        
         PhysicsObject alaReuna = Level.CreateBottomBorder();
         alaReuna.Y = -screenHeight / 2;
         alaReuna.Width = screenWidth;
@@ -132,10 +149,13 @@ public class Tank_Clash : PhysicsGame
         alaReuna.KineticFriction = 0.0;
         alaReuna.IsVisible = true;
         
-        //Ylimääräset seinät mapin keskusta varten
-        LuoSeina(-100, 100, 60, 400);
-        LuoSeina(100, -150, 60, 300);
+        //Seinät jotka on esteitä
+        LuoSeina(-200, 300, 60, 300);
+        LuoSeina(200, -300, 60, 300);
         LuoSeina(0, 0, 60, 300);
+        
+        LuoSeina(-300, -200, 60, 400);
+        LuoSeina(300, 200, 60, 400);
     }
 
     private void LuoSeina(double x, double y, double leveys, double korkeus) //Seinät mappia varte //Arska
@@ -210,13 +230,14 @@ public class Tank_Clash : PhysicsGame
             if (kohde.Tag == "Pelaaja1") //Jos osuu pelaajaan 1...
             {
                 pelaaja1HP.Value--;
+                osuminen.Play();
             }
 
             else if (kohde.Tag == "Pelaaja2") //Jos osuu pelaajaan 2...
             {
                 pelaaja2HP.Value--;
+                osuminen.Play();
             }
-            osuminen.Play();
             Remove(projektiili); //huolimatta mitä käy, poistetaan projektiili
         }
     }
@@ -233,8 +254,54 @@ public class Tank_Clash : PhysicsGame
         pistenaytto.BindTo(pistelaskuri);
         Add(pistenaytto);
     }
-}
 
+    void SpawnPowerUp()
+    {
+        bool spawnHela = RandomGen.NextBool();
+
+        PhysicsObject powerup = new PhysicsObject(20, 20);
+        powerup.Position = RandomGen.NextVector(Level.Left + 50, Level.Right - 50, Level.Bottom + 50, Level.Top - 50);
+        powerup.Shape = Shape.Circle;
+        powerup.Color = spawnHela ? Color.Green : Color.Red;
+        powerup.Tag = spawnHela ? "HPPowerUp" : "SpeedPowerUp";
+
+        Add(powerup);
+        osuminen.Play();
+
+        AddCollisionHandler(powerup, PowerUpCollisionHandler);
+    }
+
+    void PowerUpCollisionHandler(PhysicsObject powerup, PhysicsObject tankki)
+    {
+        if (tankki.Tag.ToString() != "Pelaaja1" && tankki.Tag.ToString() != "Pelaaja2")
+        {
+            return;
+        }
+
+        if (powerup.Tag.ToString() == "HPPowerUp")
+        {
+            if (tankki.Tag.ToString() == "Pelaaja1")
+            {
+                pelaaja1HP.Value += HPPowerupArvo;
+            }
+            else if (tankki.Tag.ToString() == "Pelaaja2")
+            {
+                pelaaja2HP.Value += HPPowerupArvo;
+            }
+        }
+        else if (powerup.Tag.ToString() == "SpeedPowerUp")
+        {
+            tankki.MaxVelocity *= nopeusMultiplier;
+
+            Timer.SingleShot(nopeusBoostiPituus, () => tankki.MaxVelocity *= nopeusMultiplier);
+        }
+
+        if (powerup != null && !powerup.IsDestroyed)
+        {
+            Remove(powerup);
+        }
+    }
+}
 public class Program
 { 
     public static void Main()
