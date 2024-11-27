@@ -6,8 +6,11 @@ using Jypeli;
 /// <summary>
 /// 
 /// </summary>
+///
+
 public class Tank_Clash : PhysicsGame
 {
+
     //HP
     private IntMeter pelaaja1HP;
     private IntMeter pelaaja2HP;
@@ -22,10 +25,8 @@ public class Tank_Clash : PhysicsGame
     private const int HPPowerupArvo = 1;
     private const double nopeusBoostiPituus = 10;
     private const double nopeusMultiplier = 100;
-
     public override void Begin() //Begin() on vissiin Update() - Arska
     {
-        IsFullScreen = true;
         
         //Pitää ladata erikseen
         pelaaja1Kuva = LoadImage("P1Tank.png");
@@ -37,12 +38,12 @@ public class Tank_Clash : PhysicsGame
         PowerUpLooppi();
         
         //Pelaaja1 setuppi
-        PhysicsObject tankki1 = LuoTankki(this, -800, 0, Color.Red, 2);
+        PhysicsObject tankki1 = LuoTankki(this, Level.Left+100, 0, Color.Red, 2);
         tankki1.Image = pelaaja1Kuva;
         tankki1.Size = new Vector(64, 64);
         
         //Pelaaja2 setuppi
-        PhysicsObject tankki2 = LuoTankki(this, 800, 0, Color.Blue, -2);
+        PhysicsObject tankki2 = LuoTankki(this, Level.Right-100, 0, Color.Blue, -2);
         tankki2.Image = pelaaja2Kuva;
         tankki2.Size = new Vector(64, 64);
         
@@ -51,8 +52,8 @@ public class Tank_Clash : PhysicsGame
         pelaaja2HP = new IntMeter(5);
         
         //Siitä puheen ollen
-        LuoPistelaskuri(-800, pelaaja1HP);
-        LuoPistelaskuri(800, pelaaja2HP);
+        LuoPistelaskuri(Level.Left+100, pelaaja1HP);
+        LuoPistelaskuri(Level.Right-100, pelaaja2HP);
         
         //Tää oli jottei omat luodit vahingoita.
         tankki1.Tag = "Pelaaja1";
@@ -74,7 +75,7 @@ public class Tank_Clash : PhysicsGame
     void PowerUpLooppi()
     {
         SpawnPowerUp();
-        Timer.SingleShot(2, PowerUpLooppi);
+        Timer.SingleShot(15, PowerUpLooppi);
     }
 
     void OhjainLogiikka(PhysicsObject pelaaja1, PhysicsObject pelaaja2)
@@ -150,14 +151,17 @@ public class Tank_Clash : PhysicsGame
         alaReuna.IsVisible = true;
         
         //Seinät jotka on esteitä
-        LuoSeina(-200, 300, 60, 300);
-        LuoSeina(200, -300, 60, 300);
-        LuoSeina(0, 0, 60, 300);
         
-        LuoSeina(-300, -200, 60, 400);
-        LuoSeina(300, 200, 60, 400);
+        LuoSeina(-300, Level.Bottom+150, 20, 150);
+        LuoSeina(0, 0, 30, 300);
+        
+        LuoSeina(100, 0, 150, 20);
+        LuoSeina(300, Level.Top-150, 20, 150);
+        
+        LuoSeina(Level.Left+300, Level.Top-250, 50, 50);
+        LuoSeina(Level.Right-270, Level.Bottom+220, 50, 50);
     }
-
+    
     private void LuoSeina(double x, double y, double leveys, double korkeus) //Seinät mappia varte //Arska
     {
         PhysicsObject seina = new PhysicsObject(leveys, korkeus);
@@ -240,6 +244,11 @@ public class Tank_Clash : PhysicsGame
             }
             Remove(projektiili); //huolimatta mitä käy, poistetaan projektiili
         }
+        
+        if (pelaaja1HP.Value == 0 || pelaaja2HP.Value == 0)
+        {
+            PelinLoppu();
+        }
     }
 
     void LuoPistelaskuri(double x, IntMeter pistelaskuri) //rewritasin tän - Arska
@@ -257,10 +266,15 @@ public class Tank_Clash : PhysicsGame
 
     void SpawnPowerUp()
     {
+        
+        Random rnd = new Random();
+        double x  = rnd.Next(-600,600); 
+        double y  = rnd.Next(-200,200);
+        
         bool spawnHela = RandomGen.NextBool();
 
         PhysicsObject powerup = new PhysicsObject(20, 20);
-        powerup.Position = RandomGen.NextVector(Level.Left + 50, Level.Right - 50, Level.Bottom + 50, Level.Top - 50);
+        powerup.Position = RandomGen.NextVector(x,y);
         powerup.Shape = Shape.Circle;
         powerup.Color = spawnHela ? Color.Green : Color.Red;
         powerup.Tag = spawnHela ? "HPPowerUp" : "SpeedPowerUp";
@@ -301,7 +315,21 @@ public class Tank_Clash : PhysicsGame
             Remove(powerup);
         }
     }
+    void PelinLoppu()
+    {
+        Label tekstikentta = new Label(200, 25, "Peli loppui!");
+        tekstikentta.Color = Color.White;
+        tekstikentta.TextColor = Color.Black;
+        tekstikentta.BorderColor = Color.Black;
+        Add(tekstikentta);
+        
+        Timer.SingleShot(3.0, () =>
+        {
+            System.Environment.Exit(1);
+        });
+    }
 }
+
 public class Program
 { 
     public static void Main()

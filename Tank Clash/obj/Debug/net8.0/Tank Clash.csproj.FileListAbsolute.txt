@@ -1,72 +1,130 @@
-C:\Users\Stefan\Documents\GitHub\HT_JYU\Tank Clash\Tank Clash\bin\Debug\net8.0\Tank Clash.exe
-C:\Users\Stefan\Documents\GitHub\HT_JYU\Tank Clash\Tank Clash\bin\Debug\net8.0\Tank Clash.deps.json
-C:\Users\Stefan\Documents\GitHub\HT_JYU\Tank Clash\Tank Clash\bin\Debug\net8.0\Tank Clash.runtimeconfig.json
-C:\Users\Stefan\Documents\GitHub\HT_JYU\Tank Clash\Tank Clash\bin\Debug\net8.0\Tank Clash.dll
-C:\Users\Stefan\Documents\GitHub\HT_JYU\Tank Clash\Tank Clash\bin\Debug\net8.0\Tank Clash.pdb
-C:\Users\Stefan\Documents\GitHub\HT_JYU\Tank Clash\Tank Clash\obj\Debug\net8.0\Tank Clash.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Stefan\Documents\GitHub\HT_JYU\Tank Clash\Tank Clash\obj\Debug\net8.0\Tank Clash.AssemblyInfoInputs.cache
-C:\Users\Stefan\Documents\GitHub\HT_JYU\Tank Clash\Tank Clash\obj\Debug\net8.0\Tank Clash.AssemblyInfo.cs
-C:\Users\Stefan\Documents\GitHub\HT_JYU\Tank Clash\Tank Clash\obj\Debug\net8.0\Tank Clash.csproj.CoreCompileInputs.cache
-C:\Users\Stefan\Documents\GitHub\HT_JYU\Tank Clash\Tank Clash\obj\Debug\net8.0\Tank Clash.dll
-C:\Users\Stefan\Documents\GitHub\HT_JYU\Tank Clash\Tank Clash\obj\Debug\net8.0\refint\Tank Clash.dll
-C:\Users\Stefan\Documents\GitHub\HT_JYU\Tank Clash\Tank Clash\obj\Debug\net8.0\Tank Clash.pdb
-C:\Users\Stefan\Documents\GitHub\HT_JYU\Tank Clash\Tank Clash\obj\Debug\net8.0\Tank Clash.genruntimeconfig.cache
-C:\Users\Stefan\Documents\GitHub\HT_JYU\Tank Clash\Tank Clash\obj\Debug\net8.0\ref\Tank Clash.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Tank Clash.exe
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Tank Clash.deps.json
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Tank Clash.runtimeconfig.json
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Tank Clash.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Tank Clash.pdb
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Cyotek.Drawing.BitmapFont.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\FontStashSharp.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\FontStashSharp.Base.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\FontStashSharp.Rasterizers.StbTrueTypeSharp.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Jypeli.FarseerPhysics.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Jypeli.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Silk.NET.Core.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Silk.NET.GLFW.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Silk.NET.Input.Common.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Silk.NET.Input.Glfw.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Silk.NET.Input.Sdl.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Silk.NET.Maths.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Silk.NET.OpenAL.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Silk.NET.OpenGL.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Silk.NET.SDL.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Silk.NET.Windowing.Common.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Silk.NET.Windowing.Glfw.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Silk.NET.Windowing.Sdl.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Silk.NET.XInput.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\SixLabors.ImageSharp.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\StbImageSharp.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\StbTrueTypeSharp.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\runtimes\linux-x64\native\libopenal.so
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\runtimes\osx-x64\native\libopenal.dylib
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\runtimes\win-x64\native\soft_oal.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\runtimes\win-x86\native\soft_oal.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\runtimes\linux-x64\native\libglfw.so.3
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\runtimes\osx-arm64\native\libglfw.3.dylib
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\runtimes\osx-x64\native\libglfw.3.dylib
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\runtimes\win-x64\native\glfw3.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\runtimes\win-x86\native\glfw3.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\runtimes\linux-x64\native\libSDL2-2.0.so
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\runtimes\osx-x64\native\libSDL2-2.0.dylib
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\runtimes\win-x64\native\SDL2.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\obj\Debug\net8.0\Tank Clash.csproj.AssemblyReference.cache
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\obj\Debug\net8.0\Tank Clash.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\obj\Debug\net8.0\Tank Clash.AssemblyInfoInputs.cache
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\obj\Debug\net8.0\Tank Clash.AssemblyInfo.cs
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\obj\Debug\net8.0\Tank Clash.csproj.CoreCompileInputs.cache
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\obj\Debug\net8.0\Tank Clash.sourcelink.json
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\obj\Debug\net8.0\Tank Clash.csproj.Up2Date
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\obj\Debug\net8.0\Tank Clash.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\obj\Debug\net8.0\refint\Tank Clash.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\obj\Debug\net8.0\Tank Clash.pdb
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\obj\Debug\net8.0\Tank Clash.genruntimeconfig.cache
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\obj\Debug\net8.0\ref\Tank Clash.dll
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Content\pew-pew-lame-sound-effect.wav
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Content\homemadeoof-47509.wav
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Content\P1Tank.png
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Content\P2Tank.png
-C:\Users\35844\Documents\GitHub\JYU-Pariprojekti\Tank Clash\bin\Debug\net8.0\Content\mappi.png
+C:/Users/Stefan/Documents/GitHub/HT_JYU/Tank Clash/Tank Clash/bin/Debug/net8.0/Tank Clash.exe
+C:/Users/Stefan/Documents/GitHub/HT_JYU/Tank Clash/Tank Clash/bin/Debug/net8.0/Tank Clash.deps.json
+C:/Users/Stefan/Documents/GitHub/HT_JYU/Tank Clash/Tank Clash/bin/Debug/net8.0/Tank Clash.runtimeconfig.json
+C:/Users/Stefan/Documents/GitHub/HT_JYU/Tank Clash/Tank Clash/bin/Debug/net8.0/Tank Clash.dll
+C:/Users/Stefan/Documents/GitHub/HT_JYU/Tank Clash/Tank Clash/bin/Debug/net8.0/Tank Clash.pdb
+C:/Users/Stefan/Documents/GitHub/HT_JYU/Tank Clash/Tank Clash/obj/Debug/net8.0/Tank Clash.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Stefan/Documents/GitHub/HT_JYU/Tank Clash/Tank Clash/obj/Debug/net8.0/Tank Clash.AssemblyInfoInputs.cache
+C:/Users/Stefan/Documents/GitHub/HT_JYU/Tank Clash/Tank Clash/obj/Debug/net8.0/Tank Clash.AssemblyInfo.cs
+C:/Users/Stefan/Documents/GitHub/HT_JYU/Tank Clash/Tank Clash/obj/Debug/net8.0/Tank Clash.csproj.CoreCompileInputs.cache
+C:/Users/Stefan/Documents/GitHub/HT_JYU/Tank Clash/Tank Clash/obj/Debug/net8.0/Tank Clash.dll
+C:/Users/Stefan/Documents/GitHub/HT_JYU/Tank Clash/Tank Clash/obj/Debug/net8.0/refint/Tank Clash.dll
+C:/Users/Stefan/Documents/GitHub/HT_JYU/Tank Clash/Tank Clash/obj/Debug/net8.0/Tank Clash.pdb
+C:/Users/Stefan/Documents/GitHub/HT_JYU/Tank Clash/Tank Clash/obj/Debug/net8.0/Tank Clash.genruntimeconfig.cache
+C:/Users/Stefan/Documents/GitHub/HT_JYU/Tank Clash/Tank Clash/obj/Debug/net8.0/ref/Tank Clash.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Tank Clash.exe
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Tank Clash.deps.json
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Tank Clash.runtimeconfig.json
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Tank Clash.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Tank Clash.pdb
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Cyotek.Drawing.BitmapFont.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/FontStashSharp.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/FontStashSharp.Base.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/FontStashSharp.Rasterizers.StbTrueTypeSharp.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Jypeli.FarseerPhysics.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Jypeli.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Microsoft.DotNet.PlatformAbstractions.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.Core.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.GLFW.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.Input.Common.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.Input.Glfw.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.Input.Sdl.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.Maths.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.OpenAL.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.OpenGL.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.SDL.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.Windowing.Common.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.Windowing.Glfw.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.Windowing.Sdl.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.XInput.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/SixLabors.ImageSharp.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/StbImageSharp.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/StbTrueTypeSharp.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/linux-x64/native/libopenal.so
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/osx-x64/native/libopenal.dylib
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/win-x64/native/soft_oal.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/win-x86/native/soft_oal.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/linux-x64/native/libglfw.so.3
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/osx-arm64/native/libglfw.3.dylib
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/osx-x64/native/libglfw.3.dylib
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/win-x64/native/glfw3.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/win-x86/native/glfw3.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/linux-x64/native/libSDL2-2.0.so
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/osx-x64/native/libSDL2-2.0.dylib
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/win-x64/native/SDL2.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.csproj.AssemblyReference.cache
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.AssemblyInfoInputs.cache
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.AssemblyInfo.cs
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.csproj.CoreCompileInputs.cache
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.sourcelink.json
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.csproj.Up2Date
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/refint/Tank Clash.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.pdb
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.genruntimeconfig.cache
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/ref/Tank Clash.dll
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Content/pew-pew-lame-sound-effect.wav
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Content/homemadeoof-47509.wav
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Content/P1Tank.png
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Content/P2Tank.png
+C:/Users/35844/Documents/GitHub/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Content/mappi.png
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Content/homemadeoof-47509.wav
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Content/mappi.png
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Content/P1Tank.png
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Content/P2Tank.png
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Content/pew-pew-lame-sound-effect.wav
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Tank Clash
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Tank Clash.deps.json
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Tank Clash.runtimeconfig.json
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Tank Clash.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Tank Clash.pdb
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Cyotek.Drawing.BitmapFont.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/FontStashSharp.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/FontStashSharp.Base.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/FontStashSharp.Rasterizers.StbTrueTypeSharp.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Jypeli.FarseerPhysics.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Jypeli.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Microsoft.DotNet.PlatformAbstractions.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.Core.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.GLFW.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.Input.Common.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.Input.Glfw.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.Input.Sdl.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.Maths.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.OpenAL.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.OpenGL.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.SDL.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.Windowing.Common.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.Windowing.Glfw.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.Windowing.Sdl.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/Silk.NET.XInput.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/SixLabors.ImageSharp.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/StbImageSharp.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/StbTrueTypeSharp.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/linux-x64/native/libopenal.so
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/osx-x64/native/libopenal.dylib
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/win-x64/native/soft_oal.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/win-x86/native/soft_oal.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/linux-x64/native/libglfw.so.3
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/osx-arm64/native/libglfw.3.dylib
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/osx-x64/native/libglfw.3.dylib
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/win-x64/native/glfw3.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/win-x86/native/glfw3.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/linux-x64/native/libSDL2-2.0.so
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/osx-x64/native/libSDL2-2.0.dylib
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/bin/Debug/net8.0/runtimes/win-x64/native/SDL2.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.csproj.AssemblyReference.cache
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.GeneratedMSBuildEditorConfig.editorconfig
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.AssemblyInfoInputs.cache
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.AssemblyInfo.cs
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.csproj.CoreCompileInputs.cache
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.sourcelink.json
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.csproj.Up2Date
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/refint/Tank Clash.dll
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.pdb
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/Tank Clash.genruntimeconfig.cache
+/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/obj/Debug/net8.0/ref/Tank Clash.dll
