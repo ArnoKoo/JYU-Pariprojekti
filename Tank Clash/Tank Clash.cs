@@ -66,17 +66,18 @@ public class Tank_Clash : PhysicsGame
         
         OhjainLogiikka(tankki1, tankki2);
     }
-    
+
     /// <summary>
     /// Jatkuva viiden sekunnin välinen looppi
     /// </summary>
     void PowerUpLooppi()
     {
-        SpawnPowerUp();
-        Timer.SingleShot(5, PowerUpLooppi);
+            SpawnPowerUp();
+            Timer.SingleShot(5, PowerUpLooppi);
+            Timer ajastin = new Timer();
     }
-    
-    
+
+
     /// <summary>
     /// Pelaajien ohjauslogiikka (WASDF ja nuolet+LCTRL)
     /// </summary>
@@ -245,7 +246,7 @@ public class Tank_Clash : PhysicsGame
     /// <param name="pelaaja"></param>
     void CoolDown(PhysicsObject pelaaja)
     {
-        if (isOnCooldown)
+        while (isOnCooldown)
         {
             return;
         }

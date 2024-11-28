@@ -1546,26 +1546,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Asentaja\\.nuget\\packages\\": {}
+    "/Users/stfnlbk/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asentaja\\Documents\\GitHub\\JYU-Pariprojekti\\Tank Clash\\Tank Clash.csproj",
+      "projectUniqueName": "/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/Tank Clash.csproj",
       "projectName": "Tank Clash",
-      "projectPath": "C:\\Users\\Asentaja\\Documents\\GitHub\\JYU-Pariprojekti\\Tank Clash\\Tank Clash.csproj",
-      "packagesPath": "C:\\Users\\Asentaja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Asentaja\\Documents\\GitHub\\JYU-Pariprojekti\\Tank Clash\\obj\\",
+      "projectPath": "/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/Tank Clash.csproj",
+      "packagesPath": "/Users/stfnlbk/.nuget/packages/",
+      "outputPath": "/Users/stfnlbk/RiderProjects/JYU-Pariprojekti/Tank Clash/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Asentaja\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/stfnlbk/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1614,7 +1612,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
