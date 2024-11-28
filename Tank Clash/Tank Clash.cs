@@ -264,8 +264,6 @@ public class Tank_Clash : PhysicsGame
         pistenaytto.BindTo(pistelaskuri);
         Add(pistenaytto);
     }
-
-    ''
     
     void SpawnPowerUp() //Logiikka poweruppien spawnaamisessa //Arska
     {
