@@ -13,17 +13,14 @@ public class Tank_Clash : PhysicsGame
     //HP
     private IntMeter pelaaja1HP;
     private IntMeter pelaaja2HP;
-
-    //Kuvat ja soundEfektit
-    private Image pelaaja1Kuva;
-    private Image pelaaja2Kuva;
-    private SoundEffect ampuminen;
-    private SoundEffect osuminen;
     
     //Poweruppien setuppi
     private const int HPPowerupArvo = 1;
     private const double NopeusBoostiPituus = 10;
     private const double NopeusMultiplier = 100;
+    
+    private static readonly Image[] kuvat = LoadImages("P1Tank.png","P2Tank.png");
+    private static readonly SoundEffect[] aanet = LoadSoundEffects("pew-pew-lame-sound-effect.wav", "homemadeoof-47509.wav" );
     
     
     /// <summary>
@@ -31,26 +28,16 @@ public class Tank_Clash : PhysicsGame
     /// </summary>
     public override void Begin()
     {
-        Image[] KUVAT = LoadImages("P1Tank.png","P2Tank.png");
-        SoundEffect[] ÄÄNET = LoadSoundEffects("pew-pew-lame-sound-effect.wav", "homemadeoof-47509.wav" );
-        
-        pelaaja1Kuva = KUVAT[0];
-        pelaaja2Kuva = KUVAT[1];
-        ampuminen = ÄÄNET[0];
-        osuminen = ÄÄNET[1];
 
         LuoKentta();
         PowerUpLooppi();
 
         //Pelaaja1 setuppi
-        PhysicsObject tankki1 = LuoTankki(this, Level.Left+100, 0, Color.Red, 2);
-        tankki1.Image = pelaaja1Kuva;
-        tankki1.Size = new Vector(64, 64);
+        PhysicsObject tankki1 = LuoTankki(this, Level.Left+100, 0, Color.Red, 2, kuvat[0], "Pelaaja1");
         
         //Pelaaja2 setuppi
-        PhysicsObject tankki2 = LuoTankki(this, Level.Right-100, 0, Color.Blue, -2);
-        tankki2.Image = pelaaja2Kuva;
-        tankki2.Size = new Vector(64, 64);
+        PhysicsObject tankki2 = LuoTankki(this, Level.Right-100, 0, Color.Blue, -2, kuvat[1], "Pelaaja2");
+        
         
         //HP mittaria varten
         pelaaja1HP = new IntMeter(5);
@@ -60,13 +47,10 @@ public class Tank_Clash : PhysicsGame
         LuoPistelaskuri(Level.Left+100, pelaaja1HP);
         LuoPistelaskuri(Level.Right-100, pelaaja2HP);
         
-        //Tää oli jottei omat luodit vahingoita.
-        tankki1.Tag = "Pelaaja1";
-        tankki2.Tag = "Pelaaja2";
-        
         OhjainLogiikka(tankki1, tankki2);
     }
 
+    
     /// <summary>
     /// Jatkuva viiden sekunnin välinen looppi
     /// </summary>
@@ -113,7 +97,7 @@ public class Tank_Clash : PhysicsGame
     /// <param name="väri"></param>
     /// <param name="paikka"></param>
     /// <returns></returns>
-    public static PhysicsObject LuoTankki(PhysicsGame peli, double x, double y, Color väri, int paikka) // Funkio joka luo tankkeja, tälle tulee tarvetta, kun aletaan tekee koolisiota //skaalauksesta tuli täs hyödytön, ku skaalaan ne nyt kuvan mukaan -Arska
+    public static PhysicsObject LuoTankki(PhysicsGame peli, double x, double y, Color väri, int paikka, Image kuva, string nimi) // Funkio joka luo tankkeja, tälle tulee tarvetta, kun aletaan tekee koolisiota //skaalauksesta tuli täs hyödytön, ku skaalaan ne nyt kuvan mukaan -Arska
     {
         PhysicsObject tankki = new PhysicsObject(1, 1, Shape.Rectangle);
         tankki.Color = väri;
@@ -121,6 +105,8 @@ public class Tank_Clash : PhysicsGame
         tankki.Y = y;
         
         tankki.Angle = Angle.FromDegrees(90);
+        
+        tankki.Image = kuva;
         
         tankki.LinearDamping = 0.50;
         tankki.MaxVelocity = 100;
@@ -130,11 +116,15 @@ public class Tank_Clash : PhysicsGame
         tankki.StaticFriction = 1;
         tankki.LinearDamping = 2;
         tankki.AngularDamping = 1;
+        tankki.Size = new Vector(64, 64);
+        
+        tankki.Tag = nimi;
         
         peli.Add(tankki);
         
         return tankki;
     }
+    
     
     /// <summary>
     /// Luodaan pelikenttä ja määritellään rajoja
@@ -248,7 +238,7 @@ public class Tank_Clash : PhysicsGame
     /// <param name="pelaaja"></param>
     void CoolDown(PhysicsObject pelaaja)
     {
-        while (isOnCooldown)
+        if (isOnCooldown)
         {
             return;
         }
@@ -279,7 +269,7 @@ public class Tank_Clash : PhysicsGame
         projektiili.Tag = pelaaja;
         AddCollisionHandler(projektiili, AmmusOsui);
 
-        ampuminen.Play();
+        aanet[1].Play();
     }
     
     
@@ -295,13 +285,13 @@ public class Tank_Clash : PhysicsGame
             if (kohde.Tag.Equals("Pelaaja1")) //Jos osuu pelaajaan 1...
             {
                 pelaaja1HP.Value--;
-                osuminen.Play();
+                aanet[1].Play();
             }
 
             else if (kohde.Tag.Equals("Pelaaja2")) //Jos osuu pelaajaan 2...
             {
                 pelaaja2HP.Value--;
-                osuminen.Play();
+                aanet[1].Play();
             }
             Remove(projektiili); //huolimatta mitä käy, poistetaan projektiili
         }
@@ -350,7 +340,7 @@ public class Tank_Clash : PhysicsGame
         powerup.Tag = spawnHela ? "HPPowerUp" : "SpeedPowerUp";
 
         Add(powerup);
-        osuminen.Play();
+        aanet[1].Play();
 
         AddCollisionHandler(powerup, PowerUpCollisionHandler);
     }
