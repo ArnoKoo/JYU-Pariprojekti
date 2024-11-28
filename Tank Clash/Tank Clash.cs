@@ -73,7 +73,7 @@ public class Tank_Clash : PhysicsGame
     void PowerUpLooppi()
     {
             SpawnPowerUp();
-            Timer.SingleShot(5, PowerUpLooppi);
+            Timer.SingleShot(15, PowerUpLooppi);
             Timer ajastin = new Timer();
     }
 
@@ -218,6 +218,7 @@ public class Tank_Clash : PhysicsGame
         pelaaja.Push(suunta);
     }
     
+    
     /// <summary>
     /// Molempien pelaajien taakseliikkumis logiikka.
     /// </summary>
@@ -227,6 +228,7 @@ public class Tank_Clash : PhysicsGame
         Vector suunta = Vector.FromLengthAndAngle(-1000.0, pelaaja.Angle);
         pelaaja.Push(suunta);
     }
+    
     
     /// <summary>
     /// Molempien pelaajien pyörimisen logiikka, koska tankit eivät liiku sivuttain, ainakin tähän vuoteen (2024) asti
@@ -238,6 +240,7 @@ public class Tank_Clash : PhysicsGame
         pelaaja.Angle += Angle.FromDegrees(asteenMuutokset);
     }
 
+    
     private const double CooldownDuration = 0.5;
     private bool isOnCooldown = false;
     /// <summary>
@@ -279,6 +282,7 @@ public class Tank_Clash : PhysicsGame
 
         ampuminen.Play();
     }
+    
     
     /// <summary>
     /// Logiikka, kun luoti osuu toiseen pelaajaan tai seinään.
@@ -405,6 +409,7 @@ public class Tank_Clash : PhysicsGame
         });
     }
 }
+
 
 /// <summary>
 /// Jotta peli käynnistyisi.
