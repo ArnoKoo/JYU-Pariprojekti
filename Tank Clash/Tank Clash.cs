@@ -28,12 +28,13 @@ public class Tank_Clash : PhysicsGame
     
     public override void Begin() //Begin() on vissiin Update() - Arska
     {
+        Image[] KUVAT = LoadImages("P1Tank.png","P2Tank.png");
+        SoundEffect[] ÄÄNET = LoadSoundEffects("pew-pew-lame-sound-effect.wav", "homemadeoof-47509.wav" );
         
-        //Pitää ladata erikseen
-        pelaaja1Kuva = LoadImage("P1Tank.png");
-        pelaaja2Kuva = LoadImage("P2Tank.png");
-        ampuminen = LoadSoundEffect("pew-pew-lame-sound-effect.wav");
-        osuminen = LoadSoundEffect("homemadeoof-47509.wav");
+        pelaaja1Kuva = KUVAT[0];
+        pelaaja2Kuva = KUVAT[1];
+        ampuminen = ÄÄNET[0];
+        osuminen = ÄÄNET[1];
 
         LuoKentta();
         PowerUpLooppi();
