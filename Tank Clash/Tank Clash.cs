@@ -74,7 +74,6 @@ public class Tank_Clash : PhysicsGame
     {
             SpawnPowerUp();
             Timer.SingleShot(15, PowerUpLooppi);
-            Timer ajastin = new Timer();
     }
 
 
