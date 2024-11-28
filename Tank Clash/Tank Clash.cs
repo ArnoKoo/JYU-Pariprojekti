@@ -10,7 +10,6 @@ using Jypeli;
 
 public class Tank_Clash : PhysicsGame
 {
-
     //HP
     private IntMeter pelaaja1HP;
     private IntMeter pelaaja2HP;
@@ -23,10 +22,14 @@ public class Tank_Clash : PhysicsGame
     
     //Poweruppien setuppi
     private const int HPPowerupArvo = 1;
-    private const double nopeusBoostiPituus = 10;
-    private const double nopeusMultiplier = 100;
+    private const double NopeusBoostiPituus = 10;
+    private const double NopeusMultiplier = 100;
     
-    public override void Begin() //Begin() on vissiin Update() - Arska
+    
+    /// <summary>
+    /// Begin() on vissiin Update(), mutta tänne tiivistetään koodit, mm luodaan tankit, kuvat, äänet, powerupit yms - Arska
+    /// </summary>
+    public override void Begin()
     {
         Image[] KUVAT = LoadImages("P1Tank.png","P2Tank.png");
         SoundEffect[] ÄÄNET = LoadSoundEffects("pew-pew-lame-sound-effect.wav", "homemadeoof-47509.wav" );
@@ -60,26 +63,25 @@ public class Tank_Clash : PhysicsGame
         //Tää oli jottei omat luodit vahingoita.
         tankki1.Tag = "Pelaaja1";
         tankki2.Tag = "Pelaaja2";
-
-        tankki1.KineticFriction = 1;
-        tankki1.StaticFriction = 1;
-        tankki1.LinearDamping = 2;
-        tankki1.AngularDamping = 1;
-
-        tankki2.KineticFriction = 1;
-        tankki2.StaticFriction = 1;
-        tankki2.LinearDamping = 2;
-        tankki2.AngularDamping = 1;
         
         OhjainLogiikka(tankki1, tankki2);
     }
-
+    
+    /// <summary>
+    /// Jatkuva viiden sekunnin välinen looppi
+    /// </summary>
     void PowerUpLooppi()
     {
-            SpawnPowerUp();
-            Timer.SingleShot(5, PowerUpLooppi);
+        SpawnPowerUp();
+        Timer.SingleShot(5, PowerUpLooppi);
     }
-
+    
+    
+    /// <summary>
+    /// Pelaajien ohjauslogiikka (WASDF ja nuolet+LCTRL)
+    /// </summary>
+    /// <param name="pelaaja1"></param>
+    /// <param name="pelaaja2"></param>
     void OhjainLogiikka(PhysicsObject pelaaja1, PhysicsObject pelaaja2)
     {
         //Pelaaja1
@@ -100,7 +102,17 @@ public class Tank_Clash : PhysicsGame
 
         Keyboard.Listen(Key.RightControl, ButtonState.Pressed, CoolDown, "P2 ammu", pelaaja2); //ampuminen
     }
-
+    
+    
+    /// <summary>
+    /// Luodaan tankki, määritellään eri arvoja.
+    /// </summary>
+    /// <param name="peli"></param>
+    /// <param name="x"></param>
+    /// <param name="y"></param>
+    /// <param name="väri"></param>
+    /// <param name="paikka"></param>
+    /// <returns></returns>
     public static PhysicsObject LuoTankki(PhysicsGame peli, double x, double y, Color väri, int paikka) // Funkio joka luo tankkeja, tälle tulee tarvetta, kun aletaan tekee koolisiota //skaalauksesta tuli täs hyödytön, ku skaalaan ne nyt kuvan mukaan -Arska
     {
         PhysicsObject tankki = new PhysicsObject(1, 1, Shape.Rectangle);
@@ -113,11 +125,20 @@ public class Tank_Clash : PhysicsGame
         tankki.LinearDamping = 0.50;
         tankki.MaxVelocity = 100;
         tankki.Restitution = 0.0;
+        
+        tankki.KineticFriction = 1;
+        tankki.StaticFriction = 1;
+        tankki.LinearDamping = 2;
+        tankki.AngularDamping = 1;
+        
         peli.Add(tankki);
         
         return tankki;
     }
-
+    
+    /// <summary>
+    /// Luodaan pelikenttä ja määritellään rajoja
+    /// </summary>
     private void LuoKentta()
     {
         //Rajat
@@ -163,7 +184,14 @@ public class Tank_Clash : PhysicsGame
         LuoSeina(Level.Left+300, Level.Top-250, 50, 50);
         LuoSeina(Level.Right-270, Level.Bottom+220, 50, 50);
     }
-    
+
+    /// <summary>
+    /// Luodaan seinät ja muut rajat
+    /// </summary>
+    /// <param name="x"></param>
+    /// <param name="y"></param>
+    /// <param name="leveys"></param>
+    /// <param name="korkeus"></param>
     private void LuoSeina(double x, double y, double leveys, double korkeus) //Seinät mappia varte //Arska
     {
         PhysicsObject seina = new PhysicsObject(leveys, korkeus);
@@ -177,19 +205,33 @@ public class Tank_Clash : PhysicsGame
         seina.Mass = double.PositiveInfinity; //hmm
         Add(seina);
     }
-
+    
+    
+    /// <summary>
+    /// Molempien pelaajien eteenliikkumis logiikka.
+    /// </summary>
+    /// <param name="pelaaja"></param>
     void Eteen(PhysicsObject pelaaja) //pelaajat liikkuu eteenpäin
     {
         Vector suunta = Vector.FromLengthAndAngle(1000.0, pelaaja.Angle);
         pelaaja.Push(suunta);
     }
-
+    
+    /// <summary>
+    /// Molempien pelaajien taakseliikkumis logiikka.
+    /// </summary>
+    /// <param name="pelaaja"></param>
     void Taakse(PhysicsObject pelaaja) //pelaajat liikkuu taakse
     {
         Vector suunta = Vector.FromLengthAndAngle(-1000.0, pelaaja.Angle);
         pelaaja.Push(suunta);
     }
-
+    
+    /// <summary>
+    /// Molempien pelaajien pyörimisen logiikka, koska tankit eivät liiku sivuttain, ainakin tähän vuoteen (2024) asti
+    /// </summary>
+    /// <param name="pelaaja"></param>
+    /// <param name="asteenMuutokset"></param>
     void TankkienRotaasi(PhysicsObject pelaaja, double asteenMuutokset)
     {
         pelaaja.Angle += Angle.FromDegrees(asteenMuutokset);
@@ -197,7 +239,10 @@ public class Tank_Clash : PhysicsGame
 
     private const double CooldownDuration = 0.5;
     private bool isOnCooldown = false;
-
+    /// <summary>
+    /// Pelaajien ampumisen cooldown (CooldownDutation ja isOnCooldown liittyvät koodiin)
+    /// </summary>
+    /// <param name="pelaaja"></param>
     void CoolDown(PhysicsObject pelaaja)
     {
         if (isOnCooldown)
@@ -211,6 +256,11 @@ public class Tank_Clash : PhysicsGame
         Timer.SingleShot(CooldownDuration, () => isOnCooldown = false);
     }
 
+    
+    /// <summary>
+    /// Pelaajien ampumisen logiikka.
+    /// </summary>
+    /// <param name="pelaaja"></param>
     void PiuPiu(PhysicsObject pelaaja)
     {
         PhysicsObject projektiili = new PhysicsObject(10, 10);
@@ -228,7 +278,12 @@ public class Tank_Clash : PhysicsGame
 
         ampuminen.Play();
     }
-
+    
+    /// <summary>
+    /// Logiikka, kun luoti osuu toiseen pelaajaan tai seinään.
+    /// </summary>
+    /// <param name="projektiili"></param>
+    /// <param name="kohde"></param>
     void AmmusOsui(PhysicsObject projektiili, PhysicsObject kohde) // Jos luoti osuu johonkin
     {
         if (kohde != projektiili.Tag) //olit oikeilla jäljillä, kiitos headstartist Dani - Arska
@@ -252,7 +307,13 @@ public class Tank_Clash : PhysicsGame
             PelinLoppu();
         }
     }
-
+    
+    
+    /// <summary>
+    /// Pelaajien HP systeemi ja sen logiikka
+    /// </summary>
+    /// <param name="x"></param>
+    /// <param name="pistelaskuri"></param>
     void LuoPistelaskuri(double x, IntMeter pistelaskuri) //rewritasin tän - Arska
     {
         Label pistenaytto = new Label();
@@ -266,6 +327,10 @@ public class Tank_Clash : PhysicsGame
         Add(pistenaytto);
     }
     
+    
+    /// <summary>
+    /// Pelin poweruppien määritteleminen.
+    /// </summary>
     void SpawnPowerUp() //Logiikka poweruppien spawnaamisessa //Arska
     {
         Random rnd = new Random(); 
@@ -285,7 +350,12 @@ public class Tank_Clash : PhysicsGame
 
         AddCollisionHandler(powerup, PowerUpCollisionHandler);
     }
-
+    
+    /// <summary>
+    /// Poweruppien kolission käsittely (= mitä tapahtuu, kun pelaaja osuu poweruppiin)
+    /// </summary>
+    /// <param name="powerup"></param>
+    /// <param name="tankki"></param>
     void PowerUpCollisionHandler(PhysicsObject powerup, PhysicsObject tankki)
     {
         if (tankki.Tag.ToString() != "Pelaaja1" && tankki.Tag.ToString() != "Pelaaja2")
@@ -306,9 +376,9 @@ public class Tank_Clash : PhysicsGame
         }
         else if (powerup.Tag.ToString() == "SpeedPowerUp")
         {
-            tankki.MaxVelocity *= nopeusMultiplier;
+            tankki.MaxVelocity *= NopeusMultiplier;
 
-            Timer.SingleShot(nopeusBoostiPituus, () => tankki.MaxVelocity *= nopeusMultiplier);
+            Timer.SingleShot(NopeusBoostiPituus, () => tankki.MaxVelocity *= NopeusMultiplier);
         }
 
         if (!powerup.IsDestroyed)
@@ -316,6 +386,10 @@ public class Tank_Clash : PhysicsGame
             Remove(powerup);
         }
     }
+    
+    /// <summary>
+    /// Itsestäänselvä.
+    /// </summary>
     void PelinLoppu()
     {
         Label tekstikentta = new Label(200, 25, "Peli loppui!");
@@ -331,6 +405,9 @@ public class Tank_Clash : PhysicsGame
     }
 }
 
+/// <summary>
+/// Jotta peli käynnistyisi.
+/// </summary>
 public class Program
 { 
     public static void Main()
