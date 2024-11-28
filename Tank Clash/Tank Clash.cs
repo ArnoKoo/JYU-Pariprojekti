@@ -1,8 +1,8 @@
 using System;
 using Jypeli;
 
-/// @author Stefan
-/// @version 07.10.2024
+/// @author Daniel Lobko & Arno Korhonen
+/// @version 28.11.2024
 /// <summary>
 /// 
 /// </summary>
@@ -25,6 +25,7 @@ public class Tank_Clash : PhysicsGame
     private const int HPPowerupArvo = 1;
     private const double nopeusBoostiPituus = 10;
     private const double nopeusMultiplier = 100;
+    
     public override void Begin() //Begin() on vissiin Update() - Arska
     {
         
@@ -36,7 +37,7 @@ public class Tank_Clash : PhysicsGame
 
         LuoKentta();
         PowerUpLooppi();
-        
+
         //Pelaaja1 setuppi
         PhysicsObject tankki1 = LuoTankki(this, Level.Left+100, 0, Color.Red, 2);
         tankki1.Image = pelaaja1Kuva;
@@ -74,8 +75,8 @@ public class Tank_Clash : PhysicsGame
 
     void PowerUpLooppi()
     {
-        SpawnPowerUp();
-        Timer.SingleShot(15, PowerUpLooppi);
+            SpawnPowerUp();
+            Timer.SingleShot(5, PowerUpLooppi);
     }
 
     void OhjainLogiikka(PhysicsObject pelaaja1, PhysicsObject pelaaja2)
@@ -231,13 +232,13 @@ public class Tank_Clash : PhysicsGame
     {
         if (kohde != projektiili.Tag) //olit oikeilla jäljillä, kiitos headstartist Dani - Arska
         {
-            if (kohde.Tag == "Pelaaja1") //Jos osuu pelaajaan 1...
+            if (kohde.Tag.Equals("Pelaaja1")) //Jos osuu pelaajaan 1...
             {
                 pelaaja1HP.Value--;
                 osuminen.Play();
             }
 
-            else if (kohde.Tag == "Pelaaja2") //Jos osuu pelaajaan 2...
+            else if (kohde.Tag.Equals("Pelaaja2")) //Jos osuu pelaajaan 2...
             {
                 pelaaja2HP.Value--;
                 osuminen.Play();
@@ -264,10 +265,11 @@ public class Tank_Clash : PhysicsGame
         Add(pistenaytto);
     }
 
-    void SpawnPowerUp()
+    ''
+    
+    void SpawnPowerUp() //Logiikka poweruppien spawnaamisessa //Arska
     {
-        
-        Random rnd = new Random();
+        Random rnd = new Random(); 
         double x  = rnd.Next(-600,600); 
         double y  = rnd.Next(-200,200);
         
@@ -310,7 +312,7 @@ public class Tank_Clash : PhysicsGame
             Timer.SingleShot(nopeusBoostiPituus, () => tankki.MaxVelocity *= nopeusMultiplier);
         }
 
-        if (powerup != null && !powerup.IsDestroyed)
+        if (!powerup.IsDestroyed)
         {
             Remove(powerup);
         }
@@ -325,7 +327,7 @@ public class Tank_Clash : PhysicsGame
         
         Timer.SingleShot(3.0, () =>
         {
-            System.Environment.Exit(1);
+            Environment.Exit(1);
         });
     }
 }
