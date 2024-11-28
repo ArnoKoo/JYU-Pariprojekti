@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tank Clash")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dab9b347e2ef33dedbf0e7d1fdda926a4975b2c1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8329ffe6ec94d15c9ed62a292828b83893c3162a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tank Clash")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tank Clash")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

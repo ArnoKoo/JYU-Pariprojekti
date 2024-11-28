@@ -84,7 +84,7 @@ public class Tank_Clash : PhysicsGame
         Keyboard.Listen(Key.Left, ButtonState.Down, TankkienRotaasi, "P2 vasen", pelaaja2, 5.0); //vasen
         Keyboard.Listen(Key.Right, ButtonState.Down, TankkienRotaasi, "P2 vasen", pelaaja2, -5.0); //oikea
 
-        Keyboard.Listen(Key.RightControl, ButtonState.Pressed, CoolDown, "P2 ammu", pelaaja2); //ampuminen
+        Keyboard.Listen(Key.M, ButtonState.Pressed, CoolDown, "P2 ammu", pelaaja2); //ampuminen
     }
     
     
@@ -269,7 +269,7 @@ public class Tank_Clash : PhysicsGame
         projektiili.Tag = pelaaja;
         AddCollisionHandler(projektiili, AmmusOsui);
 
-        aanet[1].Play();
+        aanet[0].Play();
     }
     
     
